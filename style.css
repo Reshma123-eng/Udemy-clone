@@ -3,20 +3,20 @@
     padding: 0;
 }
 
-.body {    
-  font-family:'Gabarito', sans-serif;
-  }
+.body {
+    font-family: 'Gabarito', sans-serif;
+}
 
-
+/* navbar */
 .navbar {
     padding: 10px;
     display: flex;
     justify-content: space-between;
     border-bottom: solid black 1px;
-    gap:10px;
+    gap: 10px;
     align-items: center;
-    position:sticky;
-    top:0;
+    position: sticky;
+    top: 0;
     background-color: white;
     z-index: 1;
 }
@@ -25,7 +25,7 @@
     color: #A435F0;
 }
 
-.navbar__s2{
+.navbar__s2 {
     padding: 10px;
     border: solid black 1px;
     border-radius: 30px;
@@ -36,138 +36,167 @@
 
 }
 
-.navbar__s2 input{
+.navbar__s2 input {
     border: none;
     font-size: 16px;
     width: 100%;
     background-color: transparent;
 }
 
-.navbar__s2 input:focus{
+.navbar__s2 input:focus {
     outline: none;
 }
 
-.navbar__s3{
+.navbar__s3 {
     display: flex;
     gap: 10px;
-    align-items:center;
+    align-items: center;
 }
+
 /* My Learning */
-.mylearning{
-    position:relative;
-}
-.mylearning__popup{
-    position:absolute;76
-    background-color:white;
-    border:solid black 1px;
-    width:100px;
-    top:150%;
-    right:0;
-    padding:20px;
-    display:none;
+.mylearning {
+    position: relative;
 }
 
-.mylearning:hover .mylearning__popup{
-    display:block;
+.mylearning__popup {
+    position: absolute;
+    background-color: white;
+    border: solid black 1px;
+    width: 100px;
+    top: 150%;
+    right: 0;
+    padding: 20px;
+    display: none;
 }
 
-.categories{
+.mylearning:hover .mylearning__popup {
+    display: block;
+}
+/* categories */
+.categories {
     display: flex;
-    padding:10px;
+    padding: 10px;
     border-bottom: solid black 1px;
     justify-content: space-around;
 }
 
-.categories p{
+.categories p {
     background-color: #A435F0;
-    color:white;
-    padding:10px;
-    border-radius:30px; 
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: solid #A435F0 1px;
 }
-.sale-image{
+
+.categories p:hover {
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border: solid #A435F0 1px;
+}
+/* sale image */
+.sale-image {
     position: relative;
 }
-.sale-image img{
-    width:100%;
+
+.sale-image img {
+    width: 100%;
 }
 
-.Sale-image__offer{
-    background-color:white;
-    width:35%;
-    position:absolute;
-    border:2px solid black;
-    padding:2%;
-    top:10%;
-    left:10%
-}
-.recommended{
-    padding:10px;
+.Sale-image__offer {
+    background-color: white;
+    width: 35%;
+    position: absolute;
+    border: 2px solid black;
+    padding: 2%;
+    top: 10%;
+    left: 10%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
-.recommended__container{
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* Recommended */
+.recommended {
+    padding: 10px;
+}
+
+.recommended__container {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 10px;
 }
 
-.course-card{
+.course-card {
     width: 250px;
 }
 
-.course-card img{
-   height:50%;   
-   width:100%;
+.course-card img {
+    height: 50%;
+    width: 100%;
 }
 
-.topics{
-    padding:10px;
+.topics {
+    padding: 10px;
 }
 
-.topics__container{
+.topics__container {
     display: flex;
     gap: 10px;
     margin-top: 10px;
     flex-wrap: wrap;
 }
 
-.topics__container p{
+.topics__container p {
     border: solid gray 2px;
-    padding:10px;
-    flex-grow:1;
-    flex-basis:25%;
+    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 25%;
 }
 
-.popular{
+.popular {
     padding: 10px;
 }
 
-.popular__container{
-    display:flex;
-    flex-wrap:wrap;
+.popular__container {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.footer{
-    padding:30px;
+.footer {
+    padding: 30px;
     background-color: black;
-    color:white;
-    
+    color: white;
+
 }
 
-.footer__one{
-    display:flex;
-    gap:10px;
+.footer__one {
+    display: flex;
+    gap: 10px;
 }
 
-.footer__one p{
-    margin:20px;
-}
-
-.footer__two{
+.footer__one p {
     margin: 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
 }
 
+.footer__two {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
